@@ -1,4 +1,4 @@
-## 根据大神的 ShaderHelper2(https://github.com/ShawnZhang2015/ShaderHelper2)修改
+## 根据大神的 ShaderHelper2( https://github.com/ShawnZhang2015/ShaderHelper2 )修改
 
 ---
 
