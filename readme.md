@@ -8,7 +8,5 @@
 + 把effect拆成 index.json和对应的glsl文件,放在effects文件夹中(主要为了格式化文件方便)
 + 总结一点从shadertoy.com搬运效果的方法(assets/effects/ReadMe.md)
 
-<iframe height=500 width=500 src="./show.gif">
-
 ![image](https://github.com/playnb/ShaderHelper2/blob/master/show.gif)
 
