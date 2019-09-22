@@ -1,0 +1,41 @@
+{
+  "ver": "2.3.1",
+  "uuid": "871961a2-545c-4afb-95cf-d2a9fdec3eb2",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {
+    "default": {
+      "formats": [
+        {
+          "name": "png",
+          "quality": 80
+        }
+      ]
+    }
+  },
+  "subMetas": {
+    "stones": {
+      "ver": "1.0.4",
+      "uuid": "a21abdf3-a844-41d7-998f-8f7ed0036a0a",
+      "rawTextureUuid": "871961a2-545c-4afb-95cf-d2a9fdec3eb2",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 965,
+      "height": 655,
+      "rawWidth": 965,
+      "rawHeight": 655,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

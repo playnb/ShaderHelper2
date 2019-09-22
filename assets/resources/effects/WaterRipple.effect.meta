@@ -1,0 +1,11 @@
+{
+  "ver": "1.0.15",
+  "uuid": "721d3340-bdf2-4f57-a45a-79445c5c3fb0",
+  "compiledShaders": [
+    {
+      "vert": "\n#define _IS_VERT_SHADER 1\n\n  precision highp float;\r  \r  uniform mat4 cc_matViewProj;\r  uniform vec2 texSize;\r  attribute vec3 a_position;\r  attribute vec2 a_uv0;\r  varying vec2 uv0;\r  varying vec2 v_texCoord;\r  void main() {\r    vec4 pos = cc_matViewProj * vec4(a_position, 1);\r    gl_Position = pos;\r    uv0 = a_uv0;\r    v_texCoord = a_uv0.xy * texSize;\r  }\n\n\n",
+      "frag": "\n#define _IS_FRAG_SHADER 1\n\n  \r  \r  \r  #if COCOS_SHADER\r  precision highp float;\r  \r  #define iChannel0 texture\r  #define iChannel1 u_sample1\r  #define iTime u_time\r  #define iMouse u_mouse\r  #define iResolution u_resolution\r  \r  uniform vec2 u_mouse;\r  uniform vec2 u_resolution;\r  uniform float u_time;\r  uniform float u_rippleSpeed;\r  \r  uniform sampler2D texture;\r  uniform vec2 texSize;\r  \r  uniform sampler2D u_sample1;\r  uniform vec2 u_sample1Size;\r  \r  varying vec2 uv0;        \r  varying vec2 v_texCoord; \r  #endif\r  #if USE_TEXTURE\r  #endif\r  \r  \r  #define tile_factor 0.2\r  #define noise_factor 0.03\r  \r  void mainImage(out vec4 fragColor, in vec2 fragCoord) {\r    vec2 position = uv0; \r    vec2 p = position;\r  \r    p.y = p.y;\r    float t = iTime / u_rippleSpeed;\r  \r    vec2 waterCoord = vec2(p.x, 1.0 - p.y);\r    vec2 texCoordNormal0 = waterCoord * tile_factor;\r    texCoordNormal0 += t;\r  \r    vec2 texCoordNormal1 = waterCoord * tile_factor;\r    texCoordNormal1.s -= t;\r    texCoordNormal1.t += t;\r  \r    vec3 normal0 = texture2D(iChannel1, fract(texCoordNormal0)).rgb * 2.0 - 1.0;\r    vec3 normal1 = texture2D(iChannel1, fract(texCoordNormal1)).rgb * 2.0 - 1.0;\r    vec3 normal = normalize(normal0 + normal1);\r  \r    \r    \r    p += noise_factor * normal.xy;\r  \r    fragColor = texture2D(iChannel0, p);\r  }\r  \r  \r  #if COCOS_SHADER\r  void main() { mainImage(gl_FragColor, v_texCoord); }\r  #endif\r  \r\n\n\n"
+    }
+  ],
+  "subMetas": {}
+}

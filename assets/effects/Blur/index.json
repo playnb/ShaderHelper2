@@ -1,0 +1,31 @@
+{
+  "techniques": [
+    {
+      "passes": [
+        {
+          "vert": "vs",
+          "frag": "fs",
+          "cullMode": "none",
+          "blend": true
+        }
+      ],
+      "layer": 0
+    }
+  ],
+  "properties": {
+    "texture": {
+      "type": "sampler2D",
+      "value": null
+    },
+    "strong": {
+      "type": "float",
+      "displayName": "模糊强度",
+      "value": 0.02
+    },
+    "light": {
+      "type": "float",
+      "displayName": "亮度",
+      "value": 1.0
+    }
+  }
+}

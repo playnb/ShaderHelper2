@@ -1,0 +1,50 @@
+{
+    "techniques": [
+        {
+            "passes": [
+                {
+                    "vert": "vs",
+                    "frag": "fs",
+                    "cullMode": "none",
+                    "blend": true
+                }
+            ],
+            "layer": 0
+        }
+    ],
+    "properties": {
+        "texture": {
+            "type": "sampler2D",
+            "value": null
+        },
+        "texSize": {
+            "type": "vec2",
+            "displayName": "纹理分辨率",
+            "value": [
+                512,
+                512
+            ]
+        },
+        "u_mouse": {
+            "type": "vec2",
+            "displayName": "鼠标位置",
+            "value": [
+                0.5,
+                0.5
+            ]
+        },
+        "u_resolution": {
+            "type": "vec2",
+            "displayName": "分辨率",
+            "value": [
+                512,
+                512
+            ]
+        },
+        "u_time": {
+            "type": "float",
+            "displayName": "时间",
+            "value": 1.0
+        }
+    }
+}
