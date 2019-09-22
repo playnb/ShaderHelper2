@@ -14,7 +14,7 @@ const ShaderEnum = cc.Enum({});
 import { ShaderPropertyTexture, ShaderPropertyVec2, ShaderProperty, ShaderPropertyFloat } from './ShaderProperty'
 import ShaderTimer from "./ShaderTimer"
 
-@ccclass
+@ccclass 
 @executeInEditMode
 @requireComponent(cc.Sprite)
 export default class ShaderHelper extends cc.Component {

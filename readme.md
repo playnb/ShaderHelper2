@@ -6,6 +6,7 @@
 + 增加sample2D参数
 + 选择着色器程序,会自动根据properties生成对应的项
 + 把effect拆成 index.json和对应的glsl文件,放在effects文件夹中(主要为了格式化文件方便)
-+ 总结一点从shadertoy.com搬运效果的方法
++ 总结一点从shadertoy.com搬运效果的方法(assets/effects/ReadMe.md)
 
+<iframe height=500 width=500 src="./show.gif">
 
