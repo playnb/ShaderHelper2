@@ -6,10 +6,10 @@ import os
 def buildIndex(content, dir):
     with open(os.path.join(dir, 'index.json'), 'rb') as f:
         lines = f.readlines()
-        lines[0] = "%{\n"
-        lines[-1] = "%}\n\n"
+        lines[0] = "%{\n\r"
+        lines[-1] = "%}\n\r\n\r"
         for l in lines:
-            if l[-1:] == '\n':
+            if l[-1:] == '\n\r':
                 content += l[0:-1]
             else:
                 content += l
@@ -18,15 +18,15 @@ def buildIndex(content, dir):
 
 def buildGLSL(content, dir, fileName):
     with open(os.path.join(dir, fileName+'.glsl'), 'rb') as f:
-        content += '\n%% '+fileName+' {\n'
+        content += '\n\r%% '+fileName+' {\n\r'
         lines = f.readlines()
         for l in lines:
             content += "  "
-            if l[-1:] == '\n':
+            if l[-1:] == '\n\r':
                 content += l[0:-1]
             else:
                 content += l
-        content += "\n}\n\n"
+        content += "\n\r}\n\r\n\r"
     return content
 
 
